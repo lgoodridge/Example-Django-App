@@ -3,10 +3,10 @@ Example app URL configuration.
 """
 
 from django.contrib import admin
-from django.urls import include, path
+from django.conf.urls import include, url
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('', include('core.urls')),
+    url('admin/', admin.site.urls),
+    url('accounts/', include('django.contrib.auth.urls')),
+    url('', include('core.urls')),
 ]
